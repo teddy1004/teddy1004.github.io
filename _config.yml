@@ -1,0 +1,4 @@
+name: Teddy
+markdown: redcarpet
+pygments: true
+permalink: date
