@@ -1,0 +1,65 @@
+---
+layout: post
+title: "Markdown Syntax"
+date: 2013-11-25 10:02:45
+---
+
+# Strong and Emphasize
+*emphasize*
+**strong**
+
+_emphasize_
+__strong__
+
+# Links and Email
+An [example](http://url.com/ "Title")
+
+An email <abc@example.com> link
+
+# Images
+<img src="http://news.baidu.com/z/resource/r/image/2013-11-25/c319a0499e7031d5523e9d3adbedf6d8.jpg" />
+
+# Headers
+Header 1
+========
+
+Header 2
+--------
+
+# Lists
+Ordered, without paragraphs
+1. Foo
+2. Bar
+Unordered, with paragraphs
+* A list item
+* Bar
+
+# Blockquotes
+> Email-style angle brackets
+
+> > And, they can be nested
+
+> #### Headers in blockquotes
+
+> * You can quote a list
+> * Etc
+
+# Inline Code
+'<code>' spans are delimited by backticks
+
+# Block Code
+indent every line of code block by at least 4 spaces or 1 tab
+    This is a normal paragraph
+        This is preformatted
+        code block
+
+
+# Horizontal Rules
+Three or more dashes or asterisks:
+---
+***
+
+# Hard Line Breaks
+end a line with two or more spaces:
+    Roses are red,  
+    Violets are blue
