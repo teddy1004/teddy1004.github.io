@@ -22,3 +22,5 @@ function MyCtrl($scope) {
 *Angular* is **Awesome**
 
 ~~I'm just joking~~
+
+~~Good morning~~
