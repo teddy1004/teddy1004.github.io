@@ -19,6 +19,17 @@ function MyCtrl($scope) {
     ];
 }
 {% endhighlight %}
+
+{% highlight html %}
+<html>
+<head>
+    <title>Hello, world</title>
+</head>
+<body>
+    <p>Hello, world</p>
+</body>
+</html>
+{% endhighlight %}
 *Angular* is **Awesome**
 
 ~~I'm just joking~~
