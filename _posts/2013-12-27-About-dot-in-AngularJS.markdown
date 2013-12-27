@@ -18,7 +18,7 @@ function MyCtrl($scope) {
         }
     ];
 }
-
+{% endhighlight %}
 *Angular* is **Awesome**
 
 ~~I'm just joking~~
