@@ -1,17 +1,23 @@
+---
+layout: post
+title:  "About Angular JS"
+date:   2013-12-27 21:13:22
+---
 > AngularJS is a great framework
 
-    function MyCtrl($scope) {
-        $scope.websites = [
-            {
-                name: "Twitter",
-                link: "twitter.com"
-            },
-            {
-                name: "Facebook",
-                link: "facebook.com"
-            }
-        ];
-    }
+{% highlight javascript %}
+function MyCtrl($scope) {
+    $scope.websites = [
+        {
+            name: "Twitter",
+            link: "twitter.com"
+        },
+        {
+            name: "Facebook",
+            link: "facebook.com"
+        }
+    ];
+}
 
 *Angular* is **Awesome**
 
