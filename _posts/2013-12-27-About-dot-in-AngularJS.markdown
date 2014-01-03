@@ -31,7 +31,3 @@ function MyCtrl($scope) {
 </html>
 {% endhighlight %}
 *Angular* is **Awesome**
-
-~~I'm just joking~~
-
-~~Good morning~~
