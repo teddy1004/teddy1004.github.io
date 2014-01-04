@@ -3,3 +3,4 @@ description: My blog
 markdown: redcarpet
 pygments: true
 permalink: /:year/:month/:day/:title/
+encoding: utf-8
