@@ -57,6 +57,6 @@ PLATFORMS
 DEPENDENCIES
   coffee-script
   jekyll
-  maruku
   rake
+  redcarpet
   sass
