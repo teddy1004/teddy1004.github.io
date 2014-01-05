@@ -6,8 +6,8 @@ task :default do
     spawn("coffee -b -w -o javascripts -c _assets/*.coffee")
   ]
 
-  trap "INT" do
-    Process.kill "INT", *pids
+  trap :INT do
+    Process.kill :INT, *pids
     exit 1
   end
 
