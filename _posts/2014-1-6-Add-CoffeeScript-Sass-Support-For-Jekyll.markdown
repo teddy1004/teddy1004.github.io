@@ -39,5 +39,5 @@ end
 简单的说 Rakefile 中的代码
 
 * 首先来说说 spawn，spawn 会创建一个子进程然后返回该进程的 pid，因此 pids 中保存了 3 个子进程的 pid。
-* trap 这里用到 Unix 信号，trap :INT 即监控 Interrupt 信号，当收到 :INT 信号后，杀死所有 pids 中的3个进程(Process.kill :INT, *pids)然后退出。
+* trap 这里用到 Unix 信号，trap :INT 即监控 Interrupt (比如 control + c)信号，当收到 :INT 信号后，杀死所有 pids 中的3个进程(Process.kill :INT, *pids)然后退出。
 * 最后一段代码的目的是要使主进程一直处于休眠状态呢，为什么要这样做呢？因为当子进程还未执行完自己的任务时主进程就退出的话，子进程就会变为 Orphan Process (孤儿进程)，这样会不便于我们监视进程的运行状态
