@@ -8,7 +8,12 @@ comments: true
 <div class="post">
 {{ content }}
 </div>
-
+{% if page.previous %}
+<a href="{{ page.previous.url }}" alt="{{ page.previous.title }}">Previous</a>
+{% endif %}
+{% if page.next %}
+<a href="{{ page.next.url }}" alt="{{ page.next.title }}">Next</a>
+{% endif %}
 <hr>
 
 {% if page.comments %}
