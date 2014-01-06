@@ -1,6 +1,17 @@
-name: Hello World
-description: My blog
+name: This is Teddy!
+description: Happy Hacking
 markdown: redcarpet
 pygments: true
 permalink: /:year/:month/:day/:title/
 encoding: utf-8
+links:
+  - name:     About
+    url:      /about
+  - name:     Blog
+    url:      /
+  - name:     Email
+    url:      mailto:ivan.wang1004@gmail.com
+    external: true
+  - name:     GitHub
+    url:      http://github.com/teddy1004
+    external: true
