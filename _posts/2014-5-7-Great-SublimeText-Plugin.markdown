@@ -9,6 +9,7 @@ date: 2014-5-7 11:01:21
 
 
 ![](/images/gutter_color.png)
+
 安装的时候需要安装的时候需要在电脑上安装 ImageMagick 依赖库，具体操作可以 Google ~~~
 
 ### MarkdownEditing
@@ -16,6 +17,7 @@ date: 2014-5-7 11:01:21
 > 文件效果会比之前好很多多
 
 ![](/images/markdown_editing.png)
+
 这是我现在在用 MarkdownEditing 写这篇博客，界面看起来是不是有点 IA Writer 的感觉呢 ~~~
 
 ### SublimeEvernote
