@@ -20,13 +20,6 @@ date: 2014-5-7 11:01:21
 
 这是我现在在用 MarkdownEditing 写这篇博客，界面看起来是不是有点 IA Writer 的感觉呢 ~~~
 
-### SublimeEvernote
-> Evernote 是平时常用的一个知识管理工具，但是它的那个编辑器实在是渣，尤其是再往里面写代码的时候
-> 真是累觉不爱啊！SublimeEvernote 插件可以让你在 Sublime Text 里面把想写的东西写好后，一句
-> 命令 Push 到 Evernote 里面，很方便吧！
-
-![](/images/sublime_evernote.png)
-
 ### Git
 > 顾名思义，不用多说了吧。直接在 Sublime Text 里面就可以执行 Git 的所有命令，不用再和终端来回
 > 切换，方便很多！
