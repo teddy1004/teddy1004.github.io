@@ -85,15 +85,25 @@ task 'resque:setup' => :environment
 > Your existing classes can easily be converted to background jobs or you can
 > create new classes specifically to do work. Or, you can do both.
 
-mail_deliver.rb 内容很简单，
+user.rb 中 send_password_reset 方法也有一定的变化:
+{% highlight ruby %}
+def send_password_reset
+    # ...
+    # Instead of send email directly, we shoud send email in the background
+    # process
+    Resque.enque(MailDeliver, id)
+end
+{% endhighlight %}
+上面代码唯一变动的就是原本直接使用 ActionMailer 发送邮件，而现在将这个过程发到了后台的队列中。注意这里我们是仅仅传入了 user 的 ID，因为我们传入的任何数据进入队列之后会被转为 JSON 格式存入 Redis 数据库中，因此我们不应该直接传入类似于 user 这种复杂的 ActiveRecord 对象。传入 ID 之后我们可以再在 worker 中根据 ID 来获取具体的对象。
+
+mail_deliver.rb 内容很简单:
 {% highlight ruby %}
 class MailDeliver
     @queue = :mail_queue
-    def self.perform(user)
-        UserMailer.password_reset(mailer).deliver
+    def self.perform(user_id)
+        user = User.find(user_id)
+        UserMailer.password_reset(user).deliver
     end
 end
 {% endhighlight %}
-
-可以看到，其实只是将原本在主线程上执行的任务放到了后台的进程中来执行，很简单吧。
-具体更详细的资料参考 RailsCasts #271 Resque 以及 #274 Remember Me & Reset Password，里面有更详细的讲解。
+通过把发送邮件的功能加入到后台队列之后，我们会发现用户点击重置密码之后很快就会转跳到新的页面而不需要像以前那样长时间的等待。
