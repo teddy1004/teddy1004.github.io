@@ -29,9 +29,9 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 {% endhighlight %}
 
-这个文件是用来配置 OmniAuth 支持的不同的 Provider 的，我们可以根据自己的需要加入不同的 provider，比如 Twitter啦，GitHub啦，像国内的 Weibo，QQ 也是有相应的 gem 的。ENV['FACEBOOK_KEY'] 和 ENV['FACEBOOK_SECRET'] 这两个是需要我们自己配置的，我们在 Facebook 注册开发者建立自己的应用后，有一个对应的 APP ID 以及 APP SECRET，这两个就是我们要的啦。
+这个文件是用来配置 OmniAuth 支持的不同的 Provider 的，我们可以根据自己的需要加入不同的 provider，比如 Twitter啦，GitHub啦，像国内的 Weibo，QQ 也是有相应的 gem 的。`ENV['FACEBOOK_KEY']` 和 `ENV['FACEBOOK_SECRET']` 这两个是需要我们自己配置的，我们在 Facebook 注册开发者建立自己的应用后，有一个对应的 APP ID 以及 APP SECRET，这两个就是我们要的啦。
 
-现在我们去 developers.facebook.com 注册自己的 app，`梯子自备`，完成之后把 APP ID 和 APP SECRET 复制下来即可。记得为 app 添加一个 web app 的类型，然后设置它的 url，这里由于我们是在本机测试，所以设置为 http://localhost:3000/
+现在我们去 `developers.facebook.com` 注册自己的 app，`梯子自备`，完成之后把 APP ID 和 APP SECRET 复制下来即可。记得为 app 添加一个 web app 的类型，然后设置它的 url，这里由于我们是在本机测试，所以设置为 `http://localhost:3000/`
 
 下来继续回到 Rails 中进行设置，我们在登录的页面加入 Login with Facebook 这个链接，url 为 /auth/facebook。好了下来就进入浏览器中点击这个链接，我们的应用会跳转到 Facebook 的页面，我们输入自己的账号密码登录后，给予相应的权限。接着又转跳回我们的应用，BOOM! 出错了，`no route matches: auth/facebook/callback`。当我们的应用在 Facebook 那边授权成功之后，会执行一个回调函数，让我们对拿到的用户的相关数据进行操作。而这个回调函数是要由我们来写的，所以下来首先在 routes.rb 中加入对这条路由的处理:
 
