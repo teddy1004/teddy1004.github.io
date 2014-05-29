@@ -6,17 +6,17 @@ date: 2014-1-6 00:16:30
 Jekyll 用来写博客很爽，可是写习惯了 CoffeeScript 和 Sass 的话，该如何让 Jekyll 支持它呢。其实很简单，实现方式和 Rails 里面差不多。
 首先是建立一个 Gemfile ，引入需要的 gems
 
-{% highlight ruby %}
+```ruby
 gem "jekyll"
 gem "sass"
 gem "coffee-script"
 # rake后面要用到
 gem "rake"
-{% endhighlight %}
+```
 
 下面就要用到之前导入的 rake 这个 gems 了，rake 就不用介绍啦～ Ruby Make
 
-{% highlight ruby %}
+```ruby
 desc "compile and run the site"
 task :default do
     pids = [
@@ -34,7 +34,7 @@ task :default do
         sleep 1
     end
 end
-{% endhighlight %}
+```
 
 简单的说 Rakefile 中的代码
 

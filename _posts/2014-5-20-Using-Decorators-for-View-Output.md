@@ -8,18 +8,18 @@ date: 2014-5-20 13:28:24
 先来看一个简单的 Helper Method 的例子
 
 #### app/views/posts/show.html.erb
-{% highlight html %}
+```html
 <span><%= publication_date @post %></span>
-{% endhighlight %}
+```
 
 #### app/helpers/posts_helper.rb
-{% highlight ruby %}
+```ruby
 module PostsHelper
     def publication_date(post)
         post.created_at.strftime '%Y-%m-%d'
     end
 end
-{% endhighlight %}
+```
 
 这是我们在 Rails 中常用的 view helper，但是它会有两个问题
 
@@ -28,13 +28,13 @@ end
 
 那么来看看下面这段代码
 #### app/views/users/show.html.erb
-{% highlight html %}
+```html
 <span><%= publication_date @user %></span>
-{% endhighlight %}
+```
 
 这段代码有问题么？虽然产生出的结果是错误的，但是却是允许这样用的。因此如果我们的 View Helpers 增多之后，以上的两个问题就会给我们带来不少的困惑。在查了一些资料之后，觉得使用 decorators 来处理这个问题是个不错的办法
 #### app/decorators/post_decorator.rb
-{% highlight ruby %}
+```ruby
 class PostDecorator
     attr_reader :post
 
@@ -54,23 +54,23 @@ class PostDecorator
         post.respond_to?(method_name, include_private) || super
     end
 end
-{% endhighlight %}
+```
 
 在 Controller 中我们需要多做一下处理
 #### app/controllers/posts_controller.rb
-{% highlight ruby %}
+```ruby
 class PostsController < ApplicationController
     def show
         post = Post.find(params[:id])
         @post_decorator = PostDecorator.new(post)
     end
 end
-{% endhighlight %}
+```
 
 这样，我们在视图中就可以直接这样写了
 #### app/views/posts/show.html.erb
-{% highlight html %}
+```html
 <span><%= @post_decorator.publication_date %></span>
-{% endhighlight %}
+```
 
 这样处理起来最初会显得麻烦一些，但是随着 Views Helpers 的增多，还是能为我们叫减小不少的麻烦。
