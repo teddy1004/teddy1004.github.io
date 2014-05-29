@@ -5,7 +5,7 @@ date: 2014-05-22 09:44:33
 ---
 随着各种产品的不断出现，大家注册的各种账号也越来越多，如果能用一个账号来登录不同的网站那么将带来很大
 的便利。Facebook 做为社交网站的 No.1，用它的账号来做登录验证是个不错的选择。
-实现这个功能，我们需要用到 OmniAuth 这个 gem，先说说 OmniAuth 是什么:
+实现这个功能，我们需要用到 `OmniAuth` 这个 gem，先说说 OmniAuth 是什么:
 
 > OmniAuth is a library that standardizes multi-provider authentication for
 > web applications. It was created to be powerful, secure, and flexible. Any
@@ -23,8 +23,8 @@ date: 2014-05-22 09:44:33
 gem 'omniauth-facebook'
 ```
 
-然后执行 bundle，接着我们要在 Rails 项目中对 OmniAuth 进行初始化，在 initializers 文件夹中创
-建新文件 omniauth.rb
+然后执行 bundle，接着我们要在 Rails 项目中对 OmniAuth 进行初始化，在 `initializers` 文件夹中创
+建新文件 `omniauth.rb`
 
 #### config/initializers/omniauth.rb
 ```ruby
@@ -43,7 +43,7 @@ end
  机测试，所以设置为 `http://localhost:3000/`
 
 下来继续回到 Rails 中进行设置，我们在登录的页面加入 Login with Facebook 这个链接，
-url 为 /auth/facebook。好了下来就进入浏览器中点击这个链接，我们的应用会跳转到 Facebook 的页面，
+url 为 `/auth/facebook`。好了下来就进入浏览器中点击这个链接，我们的应用会跳转到 Facebook 的页面，
 我们输入自己的账号密码登录后，给予相应的权限。接着又转跳回我们的应用，BOOM! 出错了，
 `no route matches: auth/facebook/callback`。当我们的应用在 Facebook 那边授权成功之后，
 会执行一个回调函数，让我们对拿到的用户的相关数据进行操作。而这个回调函数是要由我们来写的，所以下来首

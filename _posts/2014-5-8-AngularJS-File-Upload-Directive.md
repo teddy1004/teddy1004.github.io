@@ -24,11 +24,11 @@ app.directive 'fileUploader', ['$parse', ($parse) ->
 <input type="file" id="file_uploader" file-input="file" />
 ```
 
-这里我们定义了一个叫做 fileUploader 的 directive，通过在前端模版中把它和 input 绑定，我们可以
-获取到 input 的内容，element[0].files 就是上传的文件（files 是一个数组，也就是说我们还可以用它
-来实现多文件上传）。因为我们我们只上传了一个文件，因此上传的文件为 element[0].files[0]，这里我们
-用到了 $parse 这个模块，它用来解析 html。我们这里用它是需要获取到赋值给 file-uploader 的那个 model，
-然后在它所在的 scope 内赋值。这样一来，我们的 controller 中的 $scope.file 就成功获取到了上传
+这里我们定义了一个叫做 `fileUploader` 的 directive，通过在前端模版中把它和 input 绑定，我们可以
+获取到 input 的内容，`element[0].files` 就是上传的文件（files 是一个数组，也就是说我们还可以用它
+来实现多文件上传）。因为我们我们只上传了一个文件，因此上传的文件为 `element[0].files[0]`，这里我们
+用到了 `$parse` 这个模块，它用来解析 html。我们这里用它是需要获取到赋值给 file-uploader 的那个 model，
+然后在它所在的 scope 内赋值。这样一来，我们的 controller 中的 `$scope.file` 就成功获取到了上传
 的文件的信息。除此之外，我们还可以读取到 file 的很多属性，如 size，type 等等，这为对上传的文件做
 更多的限制提供了很多的便利。
 
