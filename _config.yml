@@ -1,6 +1,8 @@
 title: This is Teddy!
 description: Happy Hacking
-markdown: redcarpet
+markdown: redcarpet2
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 pygments: true
 permalink: /:year/:month/:day/:title/
 encoding: utf-8
