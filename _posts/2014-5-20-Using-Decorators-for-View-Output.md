@@ -3,7 +3,8 @@ layout: post
 title: "Using decorators for view output"
 date: 2014-5-20 13:28:24
 ---
-在处理 Views 的过程中，我们时常会遇到需要写一些 Helper Method 的情况。通常的做法是我们把它放在 app/helpers 这个目录下，大部分时间这是没什么问题的，但是有时候我们也会遇到一些特殊的情况。
+在处理 Views 的过程中，我们时常会遇到需要写一些 Helper Method 的情况。通常的做法是我们把它放在
+ app/helpers 这个目录下，大部分时间这是没什么问题的，但是有时候我们也会遇到一些特殊的情况。
 
 先来看一个简单的 Helper Method 的例子
 
@@ -32,7 +33,9 @@ end
 <span><%= publication_date @user %></span>
 ```
 
-这段代码有问题么？虽然产生出的结果是错误的，但是却是允许这样用的。因此如果我们的 View Helpers 增多之后，以上的两个问题就会给我们带来不少的困惑。在查了一些资料之后，觉得使用 decorators 来处理这个问题是个不错的办法
+这段代码有问题么？虽然产生出的结果是错误的，但是却是允许这样用的。因此如果我们的 View Helpers 增多
+之后，以上的两个问题就会给我们带来不少的困惑。在查了一些资料之后，觉得使用 decorators 来处理这个问
+题是个不错的办法
 #### app/decorators/post_decorator.rb
 ```ruby
 class PostDecorator
