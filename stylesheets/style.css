@@ -82,7 +82,7 @@ footer {
 #container {
   width: 100%;
   max-width: 768px;
-  background: #F7F7F7;
+  background: #FFF;
   margin: 40px auto 20px;
   border-radius: 8px;
   border: 1px solid #E5E5E5;
@@ -278,11 +278,17 @@ section.post {
       color: #454545; }
 
 p code {
-  font-size: 13px !important;
-  background-color: ghostwhite !important;
-  color: #444444 !important;
-  padding: 0 0.2em !important;
-  border: 1px solid #dedede; }
+  padding: 0px 5px 2px;
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-family: Monaco, "DejaVu Sans Mono", "Courier New", monospace;
+  font-size: 13px;
+  color: #666666; }
 
 pre {
   word-wrap: break-word;

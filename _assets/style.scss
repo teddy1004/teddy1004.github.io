@@ -108,7 +108,7 @@ footer {
 #container {
   width: 100%;
   max-width: 768px;
-  background: #F7F7F7;
+  background: #FFF;
   margin: 40px auto 20px;
   border-radius: 8px;
   border: 1px solid #E5E5E5;
@@ -356,6 +356,24 @@ pre {
   line-height: 1.2em;
   @include box-sizing(border-box);
 }
+
+// pre {
+//   padding: 8px 10px 8px;
+//   margin: 10px 0;
+//   border: 1px solid #dddddd;
+//   border-bottom-width: 2px;
+//   -webkit-border-radius: 3px;
+//   -moz-border-radius: 3px;
+//   border-radius: 3px;
+//   -moz-background-clip: padding;
+//   -webkit-background-clip: padding-box;
+//   background-clip: padding-box;
+//   font-family: Monaco, "DejaVu Sans Mono", "Courier New", monospace;
+//   font-size: 13px;
+//   color: #666666;
+//   -webkit-font-smoothing: inherit;
+//   overflow: auto;
+// }
 
 .signoff {
   margin-top: 30px;
