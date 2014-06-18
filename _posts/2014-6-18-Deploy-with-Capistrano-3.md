@@ -32,7 +32,7 @@ gem 'unicorn'
 
 在终端执行命令`bundle exec cap install`，接着项目中就会生成以下的文件：
 
-```shell
+```bash
 ├── Capfile
 ├── config
 │   ├── deploy
