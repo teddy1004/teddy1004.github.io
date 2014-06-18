@@ -207,7 +207,7 @@ set :enable_ssl, false
 
 ##### 向服务器上传 config 文件
 
-运行`cap production deploy:setup_config`指令，这一步是将部署所需的配置文件上传到服务器端。注意`deploy:setup_config`这些都是我们自己写的`task`，在目录`lib/capistrano`目录下。
+运行`cap production deploy:setup_config`指令，这一步是将部署所需的配置文件上传到服务器端。注意`deploy:setup_config`这些都是我们自己写的`task`，在目录`lib/capistrano`目录下。具体的代码可以参见：<a href="https://github.com/teddy1004/deploy_with_capistrano.git">Deploy with Capistrano</a>
 
 ##### 部署
 
