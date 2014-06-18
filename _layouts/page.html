@@ -1,20 +1,25 @@
-<html>
-  <head>
-    <title>{{ page.title }} - {{ site.title }}</title>
-    {% include head.html %}
-  </head>
-  <body>
-    {% include header.html %}
-    <div id="container">
-      {% include links.html %}
-      {% include page_pagination.html %}
-      <div class="content">
-        <section class='post'>
-          <h1>{{ page.title }}</h1>
-          {{ content }}
+---
+layout: default
+---
+
+<main class="content" role="main">
+    <article class="post">
+        <header class="post-header">
+            <a id="blog-logo" href="{{site.baseurl}}">
+                {% if site.logo %}
+                    <img src="{{site.logo}}" alt="{{ site.name }}" />
+                {% else %}
+                    <span class="blog-title">{{ site.name }}</span>
+                {%endif%} 
+            </a>
+        </header>
+
+        <h1 class="post-title">{{ page.title }}</h1>
+
+        <section class="post-content">
+            {{content}}
         </section>
-      </div>
-    </div>
-    {% include footer.html %}
-  </body>
-</html>
+
+    </article>
+
+</main>
