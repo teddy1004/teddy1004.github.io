@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ActiveRecord 中的一个小陷阱"
-date: 2014-6-3 14:56:30
+date: 2014-6-19 14:56:30
 ---
 我们在 ActiveRecord 中使用`where`查询时，通常是下面这样写
 
