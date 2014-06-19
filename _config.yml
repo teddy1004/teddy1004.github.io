@@ -8,7 +8,7 @@ markdown: redcarpet
 redcarpet:
   extensions: [fenced_code_blocks]
 
-paginate: 15
+paginate: 10
 
 permalink: /:year/:month/:day/:title
 encoding: utf-8
