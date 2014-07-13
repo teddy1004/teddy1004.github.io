@@ -1,0 +1,25 @@
+/*
+Errno::ENOENT: No such file or directory - _assets
+
+Backtrace:
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:369:in `read'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:369:in `update_stylesheet'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:186:in `each'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:221:in `watch'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.8/lib/sass/plugin.rb:108:in `method_missing'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.8/lib/sass/exec.rb:509:in `watch_or_update'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.8/lib/sass/exec.rb:346:in `process_result'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.8/lib/sass/exec.rb:43:in `parse'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.8/lib/sass/exec.rb:22:in `parse!'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/gems/sass-3.3.8/bin/scss:13:in `<top (required)>'
+/Users/Teddy/.rvm/gems/ruby-2.0.0-p353/bin/scss:23:in `load'
+/Users/Teddy/.rvm/gems/ruby-2.0.0-p353/bin/scss:23:in `<main>'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/bin/ruby_executable_hooks:15:in `eval'
+/Users/Teddy/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/gems/2.0.0/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory - _assets"; }
