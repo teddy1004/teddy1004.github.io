@@ -16,6 +16,7 @@ Engines 可以认为是一个小型的 `Rails application` 被嵌入到它的 `H
 `engine` 的使用也很简单，在我们的主 app 中我们只需要在 Gemfile 中加入相应的 gem 就可以了，比如上面创建的那个 engine 就是 `gem 'blorgh', path: "path/to/blorgh"`。
 
 下面是一个 Rails engine 的结构:
+
 ```bash
 .
 ├── Gemfile
