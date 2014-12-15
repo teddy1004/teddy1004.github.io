@@ -6,7 +6,7 @@ date: 2014-11-22 14:30:23
 这周被 Vincent 叫去说了一下我之前写过的代码中有几处很糟的地方，这处代码的功能是实现用户添加食物的收藏。
 
 #### 我的实现
-把用户收藏的食物作为 `User` model 的一个 instance method，调用的时候使用 user.favorite_foods。`favorite_foods` 内部是这个 user 收藏的食物的 code 的一个 list 的缓存。我们需要用到的功能有:
+把用户收藏的食物作为 `User` model 的一个 instance method，调用的时候使用 user.favorite_foods。`favorite foods` 内部是这个 user 收藏的食物的 code 的一个 list 的缓存。我们需要用到的功能有:
 
 * 添加收藏
 * 取消收藏
